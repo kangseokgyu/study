@@ -15,12 +15,15 @@ std::ostream &operator<<(std::ostream &os, TEST t) {
 }
 
 int main() {
-  uint8_t data[] = {0x02, 0x00, 0x00, 0x00, 0x01};
+  uint8_t data[] = {0x05, 0x00, 0x00, 0x00, 0x01};
 
   struct test_st *s = (struct test_st *)data;
 
   cout << "t:" << s->t << "\n";
   cout << "i:" << ntohl(s->i) << "\n";
+
+  TEST t = s->t;
+  cout << "t:" << t << "\n";
 
   return 0;
 }
