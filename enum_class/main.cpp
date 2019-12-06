@@ -25,5 +25,7 @@ int main() {
   TEST t = s->t;
   cout << "t:" << t << "\n";
 
+  cout << sizeof(bool) << "\n";
+
   return 0;
 }
